@@ -1,4 +1,4 @@
-COMPONENT_SUBMODULES += wally_core
+COMPONENT_SUBMODULES += libwally-core
 
 # Common root directory for all source directories
 LSRC := libwally-core
@@ -14,6 +14,7 @@ LSRC := libwally-core
 #$(LSRC)/crypto_pwhash/scryptsalsa208sha256/pwhash_scryptsalsa208sha256.o: CFLAGS += -Wno-type-limits
 #$(LSRC)/sodium/utils.o: CFLAGS += -Wno-unused-variable
 
+COMPONENT_DEPENDS = secp256k1
 COMPONENT_ADD_INCLUDEDIRS := $(LSRC)/include
 COMPONENT_PRIV_INCLUDEDIRS := $(LSRC)/include $(LSRC)/src
 
